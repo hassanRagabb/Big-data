@@ -1,0 +1,23 @@
+linux : is open source u can castomized kernal to many vaersions
+why linux : lightweight + speed faster + terminal only less consumption resources as a server
+kernal linux distrubutions EX: (SUSE ,upunto,CENTOS,fedor)
+linux :is only root partion under root(bin,folders,bin,fs)
+
+layers
+1-hardwaare
+2-kernal
+3-sh OR bash
+4-program(services + processes)
+
+/    :  slach called filesystem or  called (root) for admin user 
+root :  admin user home profile
+home :  have users and when u click in it show file systems s(folders or files) home for specifc user (no partion like windowsD,E) 
+bin  :  have all commands or tools for local user
+sbin :  have all commands or tools for admin user user
+boot :  have reboot like restart in windows or launch(start up seerver) windows 7 or 10
+dev  :  all partions like D , E or usp phone when u connect it hi will detect it
+etc  :  configurations serfices
+run  :  at runtime
+tmp  :  when u open(start) specific app dummy files opened and when u closed app it will be deleted
+usr  :  like program files (all programms) inside it (tmp,sbin,bin,local)
+var  :  anything that changed overtime like logs messages or Database

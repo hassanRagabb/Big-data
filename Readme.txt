@@ -5,8 +5,6 @@ Linux
 
 	Gaining proficiency in shell scripting for automation.
 
-	Exploring system administration and security practices.
-
 Big Data
 	Learning the fundamentals of Hadoop and Spark.
 

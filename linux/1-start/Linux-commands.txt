@@ -1,0 +1,328 @@
+linux :is only root partion under root the file system(bin,folders,bin,..)
+man date or man cal     ------->descripe this command with all options also (date --help) like man date
+history   -------->show all commands that u run it in terminal termianl (enta ktbtha ) stored in .bash_history as hidden file u can cat it to clean it  --> history -c
+grep :search in file
+grep hassan /etc/passwd
+ps aux | grep ali  : report ps and srearch for ali
+!!  --------->will execute the lastest command only again
+!3   ------------->excute the third column from history only
+exit equal ctrl plus d
+clear --> to clear the screen
+
+terminal is tty a bash
+complete command using tap tap (tap completion)
+ls then (tapKey tapKey)      ------->will show all ls commands
+
+
+echo hello   ------->print word hello
+echo `data is ${date}`     ------->print current data as variable
+
+----------------------------------------------------------------------------------------------   paths
+path :  /  slach caled filesystem or  called (root) for admin user  msln
+absloute :start from root / 
+relative :start from ur place dont return to root  /  to the ur destination
+
+ pwd :get my path (present working directory)
+ cd directory-name --> change directory note:cant go to file
+ cd ..     -----> (back one step)
+ cd ../..  -----> (back 2 steps)
+ to go to home
+ cd /home/username
+ cd	 ---------->write only go to home
+ cd ~
+
+----------------------------------------------------------------------------------------------   show list of files and folders in this path
+ ls / 
+ ls /var  equal  ls /var/
+ ls -a         ------->list hidden files also
+ ls 	--> List files (hidden will not appear)
+ ls -a 	-->list all also hidden files start with dot(.filename)
+ ls -l   --------->show properites for all files 
+ ls -l filename ----------->show properites for specifc filename (owner creation date . read and write )
+
+
+again 
+ls -l   --------->show properites for all files and directory  (when the created owner..)
+ls -a 	-->list all also hidden files start with dot(.filename)
+or----> ls -la         also hidden 
+or---> ls -l --all     also hidden 
+specific file        --------->    ls -l filename ----------->show properites for specifc filename (owner creation date . read and write )	
+specific directory   --------->    ls -ld dirname ----------->show properites for specifc dirname  (owner creation date . read and write )	
+
+--------------------------------------------------------------------------------------------> add user
+# for admin user
+$ for local user
+alt + ctrl + f2   -------->open new sign up 
+alt + ctrl + f2   -------->new session open new sign up 
+alt ctrl f1        ------------>open Gui 
+w                  -----------> tell u the users 3la al pc(all users)
+who      -----------> tell u the users 3la al pc(all users)
+whoami -  -> tell u which user u are (only u)
+passwd    ------------>if u local user edit password
+
+---------------------------  add user
+adduser username -->can not add user need superpermission 
+sudo adduser username --> u can now add user
+-------------------------
+sudo --> super user do
+
+sudo adduser username --> to add user
+------------------------
+
+------------------------------------------------------------------------------------------------> switch to specifc user
+su - hassan        -------->switch to hassan user and go to hassan
+
+- to switch to the root (note root dont have home)
+  su				---------------->   be a root with using root password 
+  su - root			---------------->   be a root with using root password 
+  su - 				---------------->   be a root with using root password 
+
+  sudo su 		        ------------------>make user as root with using user password 
+  su - su -      	        -------------------->   be a root with using root password 
+  pwd now is  	/root
+  exit        ---->exit user mode
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------> create directory (folder) (file)
+
+mkdir dir-name --> make directory
+rmdir dir-name --> remove dir --->must be empty
+rm -r dir-name --> to remove non empty dir (have files )
+
+touch filename --> create file 
+rm file-name   --> to remove file 
+
+----------------------------------------------------------------------------------------------> edit files 
+if file not exists will create it also (vi or vim or nano and nano here is the better)
+
+touch file-name  ------------>create file 
+file /home         ---------->type of this first (file or directory) and also the type (empty or stripped for password) ..
+
+
+vim file-name --> to edit in file
+- i --> insert mode(can edit)
+- esc --> escape mode (when u press can not write) at the end  to save or dont save
+- leave file without changes --> :q! 
+- leave with changes --> :wq or :wq!       :wq need permission for some files  :wq! u must save 
+
+
+------------------------------------------------------------------------------------------------> print content and copy file
+cat file-name       ---->  show file content concatenate
+tail filename       ---->print the lastest 10 lines of this file
+head filename       ---->print the first 10 lines of this file default(10)
+head -n 20 filename       ---->print the first 20 lines of this file
+less filename       ------>will print some lines by some lines with the key under movement tell end and u will write(q) to out
+more filename       --------->print them as partions with also key under
+grep :search in file
+grep hassan /etc/passwd
+
+cp path-of-file-or-directory destination 	--> to copy files or directories
+
+mv path-of-file-or-directory destination        --> to move files or directories
+also change the name --> mv old-name new-name
+
+
+-------------------file operation 
+--------->word count lines in specific file
+wc -l /etc/file
+-------------count words
+wc -w /etc/file
+-------------count lines and words
+wc -lw /etc/file
+-------------count lines  and words and all letters  (default for wc)
+wc -lwc /etc/file
+or wc /etc/file
+
+-------------------------------------------------------------------------------------------------date
+date    
+date plus%r  ----->pm or am
+cal     ------>calenders one month
+cal  2 2020
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1

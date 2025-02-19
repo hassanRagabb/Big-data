@@ -1,0 +1,144 @@
+etc  :   configurations serfices have(folder called passwd `cat /etc/passwd`  have inforamtion or description  about the user like group id ,name , description)
+password it self for users in file called etc/shadow as encryption  maybe asci code only root user can see all passwords for all users (may user not have password like sys user !! database or apache)
+u can change primary group(only the creation user) to secondary group(group of user like HR,SOFWARE,IT)
+--------------------------------------------------------------------------------------------> add user
+# for admin user
+$ for local user
+alt + ctrl + f2  + fn  -------->open shell :new sign up  for labtop alt + ctrl + f2 + fn
+alt + ctrl + f3 + fn  -------->open new shell tty3: new session open new sign up till f7
+alt ctrl + f1   + fn     ------------>go to open Gui from terminal
+
+w                  -----------> tell u the users 3la al pc now(all users now logined with his terminal till 7 terminal) if u click f2 u will switch to terminal 2 from w
+who      -----------> tell u the users 3la al pc(all users)
+whoami -  -> tell u which user u are (only u)
+-------------------------------------------------------------------------------
+modify bash to sh  -----> usermod -s /bin/sh hassan     : by default is bash
+modify id to user  -----> usermod -u 2000 hassan      :but user group still same not changed
+    
+------------ add user
+adduser username       also useradd username -->can not add user need superpermission 
+useradd -c `hassan ragab` hassan    --------->add description whith create user called hassan as comment
+useradd -c `hassan ragab` -e 2025-3-1 -s /bin/sh hassan 
+cat /etc/passwd 
+or
+grep :search in file
+grep hassan /etc/passwd
+
+sudo adduser username  --> u can now add user coz now super user do
+------------------------------------------------------------------------------------------------add password
+passwd    ------------>if u local user edit password or give him password
+passwd username        ------------> give him password 
+------------------------------------------------------------------------------------------------lock user by admin
+----lock user :may need visitor user the password need make it as expired
+chage -L hasan     :the last data that hassan changed password  abd inforamtion about expired and locks
+usermod -L hassan  --->lock user L is capital
+usermod -U hassan  --->UNLOCK
+usermod -e 2026-1-1 hassan  --->will be locked after 2026
+change -L hasan
+----------------------------------------------------------------------------------------------------change password
+------change password by deafult every 9999 dayes for every user need to changes the password 
+ chage -M 90 hassan :maximum change every 90 days for hassan not 9999 to check chage -L hasan
+ chage -d 0 hassan  :change password with the first login d is day :password must be change
+
+-------------------------
+
+------------------------
+
+---------------------------------------------------------------------------------------> switch to specifc user
+id  ------>show user id 
+su - hassan        -------->switch to hassan user and go to hassan
+
+- to switch to the root (note root dont have home)
+  su				---------------->   be a root with using root password 
+  su - root			---------------->   be a root with using root password 
+  su - 				---------------->   be a root with using root password 
+
+  sudo su 		        ------------------>make user as root with using user password 
+  su - su -      	        -------------------->   be a root with using root password 
+  pwd now is  	/root
+  exit        ---->exit user mode
+
+
+-----------------------------------------------------------------------------------------> delete user
+userdel hassan  ---->will only remove from /etc/passwd  but home not removed /home  :will be hear 
+userdel -r hassan ------>will remove all things realted to ahmed home and passwd with recursive
+rm -rf /home/hassan  -->recursive force remove hasan withh all things removed /home also remove from /etc/passwd 
+------------------------------------------------------------------------------------------create group
+groupadd hr
+grep hr /etc/group
+-----add users to hr group
+usermod -aG hr hassan  :aG appaend group add hassan to hr secondary group
+usermod -aG hr sayed   :aG appaend another user to hr secondary group
+grep hr /etc/group   :out like hr:x:1002,hassan,sayed
+--------rename group
+groupmod -n software hr     -->hr to be sofware
+grep software /etc/group   :out like hr:x:1002,hassan,sayed
+---------remove group
+groupdel software 
+cat /etc/group
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

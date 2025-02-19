@@ -1,0 +1,29 @@
+to secure files using permission for users: in  first 9 digits
+types of file
+1- r read  (content read only)
+2- w write (contetn can changed)
+3- x exce (commands in file need to exceute ) like docker file (program)
+4- - denied
+
+
+ ls -l   --------->show properites for all files 
+ ls -l filename ----------->show properites for specifc filename (permision links last_creatio_or_modification date . read and write ) ex: -rw-rw-r-- ,1 onwer onwer  datamodified filename
+ first 9 digits is having the persmision
+ -rw-rw-r-- ,1 onwer onwer  datamodified filename   : first rw for( who created this file may be root(admin) or any user owner )   then secod rw for(group owner may be primary or secondary) third  r is for others   U is user , G is group , O is other (world)
+
+
+ls -l filename :out ex: -r--r--r-- ,1 onwer onwer  datamodified filename
+cahnge permision for users:
+U is user , G is group , O is other (world)
+chmod g+x testfile    -->   -r--r-xr--    :go to group and add x for exce from end 
+chmod u+wx testfile   -->  -rwxr-xr--     :go to user and add wx for exce
+chmod ug-x testfile   -->  -rw--r--r--    :go to user and group and remove x for exce
+chmod a-x testfile   -->  -rw--r--r--    :go to user and group and other  remove x for exce 
+chmod a=rw file1 or chmod ugo=rw file1
+
+
+----another way numeric mode:
+r=4, w=2, x=1
+chmod 755 testfile : will be -rwxr-x-r-x  at min 62 vid 3
+r=4, w=2, x=1
+chmod 640 testfile : will be -rw-r------  at min 62 vid 3

@@ -1,0 +1,34 @@
+linux : is open source u can castomized kernal to many versions  EX: (SUSE ,upunto,CENTOS,fedor)
+why linux : lightweight + faster + terminal only interface 
+that lead to that uses fewer resources coinsumption as a server:Terminal-only interface that uses fewer resources
+
+kernal linux distrubutions  EX: (SUSE ,upunto,CENTOS,fedor)
+
+linux :is only root partion under root(bin,folders,bin,fs)
+
+layers
+1-hardwaare
+2-kernal
+3-sh OR bash
+4-program in linux program called packags(services + processes)
+
+
+windows have partions(D,E,F..)under these partions  filesystems 
+reboot in linux called restart system in windows
+
+
+/ (slash): The root directory for the admin user 
+/    :  slach called filesystem or  called (root) for admin user 
+root :  admin user home profile
+home :  have users and when u click in it show file systems s(folders or files) home for specifc user (no partion like windowsD,E) 
+bin  :  have all commands or tools for local user
+sbin :  have all commands or tools for admin user user
+boot :  contain reboot like restart in windows or launch(start up server) windows 7 or 10 also have enabled services
+dev  :  all partions like D , E or usp phone when u connect it hi will detect it
+etc  :  configurations services ex: shadow ,passwd to manage users
+run  :  at runtime
+tmp  :  when u open(start) specific app --> dummy files opened and when u closed app it will be deleted
+usr  :  like program files (contain all programms) inside it (tmp,sbin,bin,local)
+var  :  anything that changed overtime like logs messages or Databases
+
+	

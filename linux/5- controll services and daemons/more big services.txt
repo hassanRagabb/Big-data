@@ -1,0 +1,60 @@
+program is one or more services each service is one or more process
+linux start steps:
+1-bios then grup u2om kernal then systemd (u2om or start services as units )
+the term "unit" refers to the configuration files that describe system services, resources
+Types of Units :many types extentions almost is (.service)
+1-Service Units (.service) (related to system)
+2-Target Units (.target) (related to start up)
+3-Device mount (.mount) (related to filesystem and mount)
+4-Socket Units (.socket) for network
+5-Device Units (.device) 
+many ..11
+
+Service(units have) Dependencies(like child) : parent(service_name) to be active must thier child also work(active)  : 
+	systemctl list-dependencies service_name -reverse
+
+status of service: may have more ( processes id) most end with char (d) daemon mean running in background
+1-active(start its work running now) by : systemctl start sshd
+2-inactive(not work now)  by : systemctl stop sshd
+3-enable (run with boot start server or restart) when make it enabled will create symlink in path 
+4-disable  (make enabled to disabled coz u dont it run with the boot) systemctl disable sshd (but now active 3adi but when start again will not work need to nake it enabled
+5-static (for server)  user or admin cant control 3leha only kernal can 
+
+
+know status using systemctl
+
+systemctl status sshd : give u description path and job and status like enabled and active note end with char (d) daemon mean running in background
+
+
+
+
+
+
+
+
+
+
+controll services command:
+systemctl :is used to control and manage services that use systemd as their init system
+
+sudo systemctl list-units -all --type=service :List All Services active plus inactive
+sudo systemctl list-units --type=service :List All Services active only
+systemctl | gerp fail : list faild services
+
+sudo systemctl list-unit-files --type=service --state=enabled :List Enabled Services:
+sudo systemctl list-unit-files --type=service --state=enabled 
+
+sudo systemctl status
+sudo systemctl daemon-reload : (useful after making changes):
+sudo systemctl start service_name
+sudo systemctl stop service_name
+sudo systemctl restart service_name
+sudo systemctl enable service_name
+sudo systemctl disable service_name
+sudo systemctl status service_nam
+
+Working with Service Dependencies
+List Dependencies: sudo systemctl list-dependencies service_name
+
+
+-----------------------------------------------------------------------------installing and update packages

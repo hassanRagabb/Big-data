@@ -1,0 +1,118 @@
+
+program is series of instruction tell pc what to do : note when u start it instructions copied to memory and allocate vairable space need to manage execution
+process have id for itself and id for his parent 
+as tree each process have(parent process id, processItself id) 
+inital process id = 1  and his parent pid = 0  called systemd
+
+
+states of running process that consumes from cpu mempry or hard disk:
+1-running(R)    : u start app
+2-stopped(T)    : u closed app
+3-Zombie(Z)     : (have not a parent) can not control in ur system but its consumes from cpu to eneded restart the process (another methods)
+4-interruptible(sleep)S  : wait action from another process to wake up  or signal
+5-Unterruptible(sleep)D  : wait action from another process to wake up 
+
+
+commands with process 
+1-manages process(ps)
+2-process monitoring(top,sar,watch)
+3-killing process(kill,pkill)
+4-setting priority(nice,renice)
+
+man ps :all commands used with ps : u can add - with ps and also u can run without - mince
+ps : print all process id u used 
+print only specifc columns : ps -eo pid,tid,user....ppid...
+pstree  : print the tree of process as network(hashtable)
+ps -aux :like report get all current processes print table without lines     att(a) for all att(u) users att(x) for sort : print all process with users with sorting
+ps -ef  :ike description get all process with parent like ps -aux but the columns added like ppid
+ps lax  :all with priority
+
+
+----print current satate
+top :command like task manager details as report each processes with ids
+
+----kill process
+k okay then write id then okay then send segterm like 15 
+kill -l : will print 64 signal like restart or kill ...
+famous sigkill
+9 kill(sigkill) (remove from system)
+15 terminate process (sigterm) (closed but lsa in system)
+3 restart (sigquit)
+----------------------------------------------------create a sleep process
+
+sleep 1000  :by deafult process to counter 10000 seconds will consume terminal so need to run it in background :so stoped it and wait in background as stopped process woth id and i will resumed it again 
+sleep 10000 & : will run in background  not conume terminal   
+
+----print process running in background
+jobs :have running and stoped also
+---resume the stoped process
+bg %1 :run again job will show all running
+-----------------------------------------------------------------------------------------------------------------------kill & pkill & killall
+kill(process id) & pkill(all process only login left) & killall(log out user itself)
+-----------kill process using id :only kill this process (just kill one process)
+ps : take id
+kill pid or kill -15 pid : 15 here is segterm terminated
+
+-----------pkill process using user name (kill all process that user made only will leave the login process as session)
+pkill -u hassan        :kill all processes for the hassan only will leave login
+killall -u  hassan    :kill all processes (sign out this user) (go out of my system )
+
+ps aux | grep ali
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

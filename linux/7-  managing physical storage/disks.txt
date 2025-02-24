@@ -1,0 +1,19 @@
+linyx :boot plus ram plus swap :swap is virtual memory    :ex  one disk -->(sda1 is boot ,sda2 is memory ,sda2.is swap)
+disks in :dev partion (devices) disk is server(many disks) each disk (partioned again sda1 for mount boot ,sda2 for root and swap(swap is virtual memory) and mnt msln) we use swap when if u have proces in mempry consume 80% of memory size cant get 100% so will take some to run in swap to be (100%) :note swap equal 2*ram size  
+
+
+commands:
+fdisk -l : list information about disks(size,sectors inside cectors slinders))  in dev type sda :s for scazi disk a is the first disk second disk is sdb if u have servers(sda ,sdb,sdc,..)
+lsbalk:like fdisk -l (network)
+df -h:another details (used ,avialbe, 
+blkid: out is id for sda1 ,sda2 (uuid universial uniqe id)
+
+
+ls -l :give properites but initial porperties(meta data) not the real in size 
+du -h filename :give real size
+du -hs /var :h for size and s as compressed
+du -h  /var :print each file size in /var 
+
+
+
+lsof :lists all opened file

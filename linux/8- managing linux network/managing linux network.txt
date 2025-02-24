@@ -1,0 +1,24 @@
+network at min 1:58 : u have linux and also u have max and need to make connection between linux and mack to speak (using ip address for each device)
+configre ip address: using gui or command (ip add , submask ,ip gatway)dns like google 8.8.8.8
+
+using commands:
+ifconfig : to see ip of ens33 is cart and netmask and  other..
+ip addr :also to see ip another summary msln 
+ip link : give u mac address and status server up or down..
+route : gateway :route --help
+
+pint  192.168... : for test connection  :many connection for test
+pint -c3 192.168... : for test connection only check 3 connection
+
+
+confige cart using command line 
+numtui :open  gui network manager text user interface will open edit connectio pick up
+enter ip add like :192.168.100.100
+subnet :255.255.255.0
+gateway:192.168.100.101 :note 101 is msln
+-------------------------------------------------------------------------------------------------
+
+putty app in windows : access remotly to ip add like ip for linux from windows: at min 2:17h
+ask u to download publick key press okay then sign as root or any user
+
+

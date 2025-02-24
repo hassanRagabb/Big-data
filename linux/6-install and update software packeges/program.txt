@@ -1,0 +1,101 @@
+program called packags in linux :programname-version-release-Arch.rpm   :arch 32bit or 64 bit :if noArch mean he support 32 plus 64      release like level1
+operations:
+1-search about packege
+2-download it
+3-install
+4-query( tst3lm 3no) like:search
+5-update to new versions (major.minor) from h.1 to h.2  or upgrade  from h.1 to h.7 (solve old problems plus take neew features)            h.1 :h is major 1 is minor
+6-remove or uninstall
+
+
+commands: 
+1- rpm  -> problems with downloads -->do all from the six above but cant download  need to use  wget with rpm to download from iso only
+2- yum --> solve download by connect ur server with server in internet and search like internet (linux version 7 )
+3- dnf(todays) like yum but download  with version 8 (fast than yum ) code less than yum
+
+---- print all apps or packages u have
+rpm -qa :print all apps or packages u have
+rpm -qa firefox : will get apps start with firefox will also print version
+
+--get information about specific app
+rpm -qi firefox 
+---where the files paths for specific package on system (shared as network)
+rpm -ql firefox 
+------help (documentation for this app
+rpm -qd firefox  then write man firefox msln
+------check if has script or config file
+rpm -qc firefox or rpm -q --script firefox or  rpm -q --scripts firefox
+
+-----------------------------------------------------------------------------------remove uninstall package
+rpm -e firefox   :e to remove uninstall
+
+yum remove samba :will ask you complete press y or yum remove samba -y 	:y for yes
+dnf update :update all system (packages) -->will upgrade 
+
+dnf install samba -y 
+
+
+-----------------------------------------------------------------------------------rpm install package
+install package u uninstall it (extention is .rpm)
+rpm -ivh firefox-version-release-Arch.rpm  but may be rpm tell this packege need plugin called dependencies need to search and download loop
+solved rpm using yum 
+yum search 
+--- need to install packeges from iso 
+all packeges stored in iso or file u download it the sys
+1-first go to cd rom
+mount /dev/mnt/sr0 /mnt/  ------>cant read only
+cd /mnt/   :mnt have directores inside each one installed packeges need only to setuo it
+ls
+2-cd AppStream/
+cd AppStream/mnt/Packages/ 
+ls fire   
+if no found firefox
+return to cd mnt by cd ../.. 
+then go to the another directory also enter to pakages and search by ls firewalld-
+if u found it so setup it
+rpm -ivh firefox-version-release-Arch.rpm     : i mean install and vh show in terminal info about setup (install percentage %) if u only write -i will install in background
+
+
+----------------------------------------------------------------------------------yum install package
+yum --> solve download by connect ur server with server in internet and search like internet
+yum search samba :install samba may happen errors cant connect to net  
+so coonect to network using steps
+1-yum clean all then
+2-ping 8.8.8.8 :result network is unreachable
+3-nmcli con sh
+4-nmcli con up ens33 ------->etherned not bridge
+5-ifconfig -->get ip adders for ens33
+ping 8.8.8.8 : u are connected
+
+yum repolist
+6-yum search samba  or dnf search samba :list of samba with features for each one if u write install will install all list (many packeges installed kda 3bt need to write specific )
+7- yum install samba
+to check if u download it : rpm -qa | grep samba  or yum list samba
+
+
+-----------GET INFO ABOUT package
+yum info samba
+or dnf info samba
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
